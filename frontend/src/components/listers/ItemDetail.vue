@@ -15,16 +15,11 @@
                 <String label="ItemSize" v-model="item.itemSize" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="Material" v-model="item.material" :editMode="editMode" @change="change" />
-            </div>
-            <div>
-                <String label="Process" v-model="item.process" :editMode="editMode" @change="change" />
-            </div>
-            <div>
                 <Date label="CreateAt" v-model="item.createAt" :editMode="editMode" @change="change" />
             </div>
-            <MaterialId offline label="MaterialId" v-model="item.materialId" :editMode="false" :key="false" @change="change" />
             <ProcessId offline label="ProcessId" v-model="item.processId" :editMode="false" :key="false" @change="change" />
+            <MaterialId offline label="MaterialId" v-model="item.materialId" :editMode="false" :key="false" @change="change" />
+            <ItemCd offline label="ItemCd" v-model="item.itemCd" :editMode="false" :key="false" @change="change" />
         </v-card-text>
 
         <v-card-actions>

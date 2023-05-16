@@ -34,7 +34,7 @@ mvn spring-boot:run
 ## Test by API
 - ItemMaster
 ```
- http :8088/items id="id" item_cd="item_cd" item_name="item_name" item_size="item_size" material="material" process="process" createAt="createAt" materialId="materialId" processId="processId" 
+ http :8088/items id="id" item_cd="item_cd" item_name="item_name" item_size="item_size" createAt="createAt" processId="processId" materialId="materialId" itemCd="itemCd" 
 ```
 - Process
 ```

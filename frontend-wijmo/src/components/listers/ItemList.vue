@@ -17,7 +17,6 @@
                             
                             
                             
-                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
@@ -25,11 +24,10 @@
                             [ ItemCd :  {{data.itemCd }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ ItemName :  {{data.itemName }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ ItemSize :  {{data.itemSize }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ Material :  {{data.material }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ Process :  {{data.process }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ CreateAt :  {{data.createAt }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ MaterialId :  {{data.materialId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ ProcessId :  {{data.processId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ MaterialId :  {{data.materialId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ ItemCd :  {{data.itemCd }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -114,11 +112,10 @@
                 'itemCd': '',
                 'itemName': '',
                 'itemSize': '',
-                'material': '',
-                'process': '',
                 'createAt': '2023-05-16',
-                'materialId': {},
                 'processId': {},
+                'materialId': {},
+                'itemCd': {},
             }
         },
         methods: {

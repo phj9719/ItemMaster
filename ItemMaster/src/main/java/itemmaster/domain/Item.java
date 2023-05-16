@@ -23,17 +23,24 @@ public class Item {
 
     private String itemSize;
 
-    private String material;
-
-    private String process;
-
     private Date createAt;
 
     @Embedded
+    @AttributeOverride(
+        name = "id",
+        column = @Column(name = "processId", nullable = true)
+    )
+    private ProcessId processId;
+
+    @Embedded
+    @AttributeOverride(
+        name = "id",
+        column = @Column(name = "materialId", nullable = true)
+    )
     private MaterialId materialId;
 
     @Embedded
-    private ProcessId processId;
+    private ItemCd itemCd;
 
     @PostPersist
     public void onPostPersist() {

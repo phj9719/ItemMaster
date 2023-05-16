@@ -32,19 +32,16 @@
                                             ItemSize :  {{item.itemSize }}
                                         </v-list-item-subtitle>
                                         <v-list-item-subtitle>
-                                            Material :  {{item.material }}
-                                        </v-list-item-subtitle>
-                                        <v-list-item-subtitle>
-                                            Process :  {{item.process }}
-                                        </v-list-item-subtitle>
-                                        <v-list-item-subtitle>
                                             CreateAt :  {{item.createAt }}
+                                        </v-list-item-subtitle>
+                                        <v-list-item-subtitle>
+                                            ProcessId :  {{item.processId }}
                                         </v-list-item-subtitle>
                                         <v-list-item-subtitle>
                                             MaterialId :  {{item.materialId }}
                                         </v-list-item-subtitle>
                                         <v-list-item-subtitle>
-                                            ProcessId :  {{item.processId }}
+                                            ItemCd :  {{item.itemCd }}
                                         </v-list-item-subtitle>
                                     </v-list-item-content>
 
@@ -97,12 +94,10 @@
                 
                 
                 
-                
                 var id = me.value[idKey];
                 var tmpValue = await axios.get(axios.fixUrl('/items/' + id))
                 if(tmpValue.data) {
                     var val = tmpValue.data
-                    
                     
                     
                     
@@ -128,7 +123,6 @@
                     
                     
                     
-                    
                     var id = this.value[idKey];
                     var path = '/items/';
                     this.$router.push(path + id);
@@ -139,7 +133,6 @@
                 if(val != undefined) {
                     var arr = this.list[val]._links.self.href.split('/');
                     obj['id'] = arr[4]; 
-                    
                     
                     
                     

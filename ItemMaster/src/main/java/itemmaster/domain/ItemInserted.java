@@ -14,8 +14,8 @@ public class ItemInserted extends AbstractEvent {
     private String itemName;
     private String itemSize;
     private Date createAt;
-    private MaterialId materialId;
     private ProcessId processId;
+    private MaterialId materialId;
 
     public ItemInserted(Item aggregate) {
         super(aggregate);

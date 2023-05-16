@@ -80,11 +80,10 @@
                     'itemCd': '',
                     'itemName': '',
                     'itemSize': '',
-                    'material': '',
-                    'process': '',
                     'createAt': '2023-05-16',
-                    'materialId': {},
                     'processId': {},
+                    'materialId': {},
+                    'itemCd': {},
                 }
             },
 

@@ -30,16 +30,14 @@
             :selectionChanged="onSelectionChanged"
             style="margin-top:10px; max-height:65vh;"
         >
-            <wj-flex-grid-filter :filterColumns="['itemCd','itemName','itemSize','material','process','createAt','materialId','processId',]" />
+            <wj-flex-grid-filter :filterColumns="['itemCd','itemName','itemSize','createAt','processId','materialId','itemCd',]" />
             <wj-flex-grid-column binding="index" header="Number" width="2*" :isReadOnly="true" align="center" />
             <wj-flex-grid-column binding="itemCd" header="itemCd" width="2*" :isReadOnly="true" align="center" />
             <wj-flex-grid-column binding="itemName" header="itemName" width="2*" :isReadOnly="true" align="center" />
             <wj-flex-grid-column binding="itemSize" header="itemSize" width="2*" :isReadOnly="true" align="center" />
-            <wj-flex-grid-column binding="material" header="material" width="2*" :isReadOnly="true" align="center" />
-            <wj-flex-grid-column binding="process" header="process" width="2*" :isReadOnly="true" align="center" />
             <wj-flex-grid-column binding="createAt" header="createAt" width="2*" :isReadOnly="true" align="center" />
-            <wj-flex-grid-column binding="materialId." header="material" width="2*" :isReadOnly="true" align="center" />
             <wj-flex-grid-column binding="processId." header="process" width="2*" :isReadOnly="true" align="center" />
+            <wj-flex-grid-column binding="materialId." header="material" width="2*" :isReadOnly="true" align="center" />
         </wj-flex-grid>
         <v-col style="margin-bottom:40px;">
             <div class="text-center">

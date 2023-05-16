@@ -20,11 +20,10 @@
             <String label="ItemCd" v-model="value.itemCd" :editMode="editMode"/>
             <String label="ItemName" v-model="value.itemName" :editMode="editMode"/>
             <String label="ItemSize" v-model="value.itemSize" :editMode="editMode"/>
-            <String label="Material" v-model="value.material" :editMode="editMode"/>
-            <String label="Process" v-model="value.process" :editMode="editMode"/>
             <Date label="CreateAt" v-model="value.createAt" :editMode="editMode"/>
-            <MaterialId offline label="MaterialId" v-model="value.materialId" :editMode="editMode" @change="change"/>
             <ProcessId offline label="ProcessId" v-model="value.processId" :editMode="editMode" @change="change"/>
+            <MaterialId offline label="MaterialId" v-model="value.materialId" :editMode="editMode" @change="change"/>
+            <ItemCd offline label="ItemCd" v-model="value.itemCd" :editMode="editMode" @change="change"/>
         </v-card-text>
 
         <v-card-actions>
