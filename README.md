@@ -38,7 +38,7 @@ mvn spring-boot:run
 ```
 - Process
 ```
- http :8088/processes id="id" item_cd="item_cd" item_name="item_name" 
+ http :8088/processes id="id" item_cd="item_cd" 
 ```
 - Material
 ```

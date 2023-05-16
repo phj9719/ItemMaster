@@ -18,7 +18,6 @@
 
         <v-card-text>
             <String label="ItemCd" v-model="value.itemCd" :editMode="editMode"/>
-            <String label="ItemName" v-model="value.itemName" :editMode="editMode"/>
         </v-card-text>
 
         <v-card-actions>

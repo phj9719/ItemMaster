@@ -8,5 +8,5 @@ import lombok.Data;
 @Data
 public class ItemViewQuery {
 
-    String itemName;
+    String itemCd;
 }

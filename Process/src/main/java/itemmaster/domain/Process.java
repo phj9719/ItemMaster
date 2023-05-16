@@ -19,8 +19,6 @@ public class Process {
 
     private String itemCd;
 
-    private String itemName;
-
     @PostPersist
     public void onPostPersist() {
         ProcessInserted processInserted = new ProcessInserted(this);

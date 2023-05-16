@@ -20,6 +20,6 @@ public class ItemController {
 
     @PutMapping("/items/search/findByItemCd")
     public Object findByItemCd(@RequestBody ItemViewQuery query) {
-        return itemRepository.findByItemCd(query.getItemName());
+        return itemRepository.findByItemCd(query.getItemCd());
     }
 }

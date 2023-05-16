@@ -78,7 +78,6 @@
                 
                 me.newValue = {
                     'itemCd': '',
-                    'itemName': '',
                 }
             },
 

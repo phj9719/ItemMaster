@@ -1,7 +1,7 @@
 <template>
     <div>
         <v-card-title @click="openDialog" style="cursor: pointer;">
-            Process : 
+            Process :  {{referenceValue ? referenceValue.itemCd : '' }} 
         </v-card-title>
 
         <v-dialog v-model="pickerDialog">
@@ -21,12 +21,10 @@
                                     
                                     <v-list-item-content>
                                         <v-list-item-title>
+                                            {{item.itemCd }}
                                         </v-list-item-title>
                                         <v-list-item-subtitle>
                                             ItemCd :  {{item.itemCd }}
-                                        </v-list-item-subtitle>
-                                        <v-list-item-subtitle>
-                                            ItemName :  {{item.itemName }}
                                         </v-list-item-subtitle>
                                     </v-list-item-content>
 
@@ -73,14 +71,12 @@
             if(me.value && typeof me.value == "object" && Object.values(me.value)[0]) {
                 var idKey = 'id'
                 
-                
                 var id = me.value[idKey];
                 var tmpValue = await axios.get(axios.fixUrl('/processes/' + id))
                 if(tmpValue.data) {
                     var val = tmpValue.data
                     
-                    
-                    
+                    me.selected = me.list.findIndex((item) => item.itemCd == val.itemCd)
                     me.referenceValue = val
                 }
             }
@@ -92,7 +88,6 @@
                 } else {
                     var idKey = 'id'
                     
-                    
                     var id = this.value[idKey];
                     var path = '/processes/';
                     this.$router.push(path + id);
@@ -103,7 +98,6 @@
                 if(val != undefined) {
                     var arr = this.list[val]._links.self.href.split('/');
                     obj['id'] = arr[4]; 
-                    
                     
                     this.$emit('selected', obj);
                     this.referenceValue = this.list[val];

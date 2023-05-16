@@ -36,7 +36,7 @@
             <wj-flex-grid-column binding="itemName" header="itemName" width="2*" :isReadOnly="true" align="center" />
             <wj-flex-grid-column binding="itemSize" header="itemSize" width="2*" :isReadOnly="true" align="center" />
             <wj-flex-grid-column binding="createAt" header="createAt" width="2*" :isReadOnly="true" align="center" />
-            <wj-flex-grid-column binding="processId." header="process" width="2*" :isReadOnly="true" align="center" />
+            <wj-flex-grid-column binding="processId.item_cd" header="process" width="2*" :isReadOnly="true" align="center" />
             <wj-flex-grid-column binding="materialId." header="material" width="2*" :isReadOnly="true" align="center" />
         </wj-flex-grid>
         <v-col style="margin-bottom:40px;">

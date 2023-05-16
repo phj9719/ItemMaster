@@ -30,10 +30,9 @@
             :selectionChanged="onSelectionChanged"
             style="margin-top:10px; max-height:65vh;"
         >
-            <wj-flex-grid-filter :filterColumns="['itemCd','itemName',]" />
+            <wj-flex-grid-filter :filterColumns="['itemCd',]" />
             <wj-flex-grid-column binding="index" header="Number" width="2*" :isReadOnly="true" align="center" />
             <wj-flex-grid-column binding="itemCd" header="itemCd" width="2*" :isReadOnly="true" align="center" />
-            <wj-flex-grid-column binding="itemName" header="itemName" width="2*" :isReadOnly="true" align="center" />
         </wj-flex-grid>
         <v-col style="margin-bottom:40px;">
             <div class="text-center">

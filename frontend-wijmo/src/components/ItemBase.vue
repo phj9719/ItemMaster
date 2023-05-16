@@ -3,7 +3,6 @@
 </template>
 
 <script>
-    import ProcessBase from '../components/ProcessBase.vue'
     import MaterialBase from '../components/MaterialBase.vue'
     const axios = require('axios').default;
 
@@ -55,17 +54,12 @@
                 }
             },
             async processData(data){
-                let ProcessClass = this.$Vue.extend(ProcessBase);
-                this.processId = new ProcessClass();
                 let MaterialClass = this.$Vue.extend(MaterialBase);
                 this.materialId = new MaterialClass();
                 
 
                 let Promises = data.map(async (value) => {
                     if(value == null) return
-                    if (value.processId && value.processId.id){
-                        value.processId = await this.processId.getRealEntity(value.processId.id);
-                    }
                     if (value.materialId && value.materialId.id){
                         value.materialId = await this.materialId.getRealEntity(value.materialId.id);
                     }
@@ -85,7 +79,7 @@
                 } 
                 var temp = null;
                 if(query!=null){
-                    temp = await axios.put(axios.fixUrl('/items/search/findByItemCd'), { itemName: query.parameters.itemName });
+                    temp = await axios.put(axios.fixUrl('/items/search/findByItemCd'), { itemCd: query.parameters.itemCd });
                     me.values = await me.processData(temp.data);
                 }else{
                     temp = await axios.get(axios.fixUrl('/items'))

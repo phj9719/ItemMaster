@@ -68,7 +68,6 @@
                 [
                     { text: "id", value: "id" },
                     { text: "itemCd", value: "itemCd" },
-                    { text: "itemName", value: "itemName" },
                 ],
             process : [],
             newValue: {},
@@ -87,7 +86,6 @@
 
             this.newValue = {
                 'itemCd': '',
-                'itemName': '',
             }
         },
         methods: {
